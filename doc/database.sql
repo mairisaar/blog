@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Jan 08, 2019 at 10:40 AM
+-- Generation Time: Jan 10, 2019 at 08:55 AM
 -- Server version: 5.6.41
 -- PHP Version: 7.2.7
 
@@ -38,7 +38,8 @@ CREATE TABLE `post` (
 
 INSERT INTO `post` (`post_id`, `post_subject`, `post_text`, `post_created`, `user_id`) VALUES
 (2, 'Esimene', 'See on esimene postitus', '2019-01-08 08:08:18', 1),
-(3, 'Teine', 'See on teine postitus', '2019-01-08 08:11:44', 1);
+(3, 'Teine', 'See on teine postitus', '2019-01-08 08:11:44', 1),
+(4, 'Kolmas', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.', '2019-01-10 06:50:54', 1);
 
 -- --------------------------------------------------------
 
@@ -87,7 +88,11 @@ INSERT INTO `translations` (`translation_id`, `phrase`, `language`, `translation
 (24, 'Oops...', 'en', '{untranslated}', 'global', 'global'),
 (25, 'Close', 'en', '{untranslated}', 'global', 'global'),
 (26, 'Server returned an error. Please try again later ', 'en', '{untranslated}', 'global', 'global'),
-(27, 'Action', 'en', '{untranslated}', 'global', 'global');
+(27, 'Action', 'en', '{untranslated}', 'global', 'global'),
+(28, 'Action', 'et', '{untranslated}', 'global', 'global'),
+(29, 'Oops...', 'et', '{untranslated}', 'global', 'global'),
+(30, 'Close', 'et', '{untranslated}', 'global', 'global'),
+(31, 'Server returned an error. Please try again later ', 'et', '{untranslated}', 'global', 'global');
 
 -- --------------------------------------------------------
 
@@ -144,13 +149,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `post`
 --
 ALTER TABLE `post`
-  MODIFY `post_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `post_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `translations`
 --
 ALTER TABLE `translations`
-  MODIFY `translation_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `translation_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- AUTO_INCREMENT for table `users`
@@ -169,4 +174,3 @@ ALTER TABLE `post`
   ADD CONSTRAINT `post_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`);
 SET FOREIGN_KEY_CHECKS=1;
 COMMIT;
-
