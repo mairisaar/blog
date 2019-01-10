@@ -64,11 +64,6 @@
                     <li class="active"><a href="javascript:;"><span class="glyphicon glyphicon-star"></span> News</a></li>
                     <li><a href="javascript:;">Latest news</a></li>
                     <li><a href="javascript:;">Updates</a></li>
-                    <li><a href="javascript:;">Training</a></li>
-                    <li><a href="javascript:;">Nutrition</a></li>
-                    <li><a href="javascript:;">Proteins</a></li>
-                    <li><a href="javascript:;">Recipes</a></li>
-                    <li><a href="javascript:;">Challenge</a></li>
                     <li class="nav-divider"></li>
                     <li><a href="javascript:;"><i class="glyphicon glyphicon-off"></i> Sign in</a></li>
                 </ul>
@@ -77,10 +72,10 @@
         </div>
 
      <div class="col-md-10 blogShort">
-                     <h1><?=$posts['post_subject']?></h1>
-                    <h2>Autor<?=$posts['name']?></h2>
+                     <h1><? echo $post['post_subject'];?></h1>
+                    <h2><? echo $post['name'];?></h2>
                      <img src="http://joern-duwe.de/aquaristik/images/skalare00.jpg" alt="post img" class="pull-left img-responsive postImg img-thumbnail margin10">
-                     <p>Sisu<?=$posts['post_text']?></p>
+                     <p><? echo $post['post_text'];?></p>
                 
                  </div>
 	</div>
