@@ -7,11 +7,7 @@
     .blogShort{ border-bottom:1px solid #ddd;}
     .add{background: #333; padding: 10%; height: 300px;}
 
-    .nav-sidebar {
-        width: 100%;
-        padding: 8px 0;
-        border-right: 1px solid #ddd;
-    }
+
     .nav-sidebar a {
         color: #333;
         -webkit-transition: all 0.08s linear;
@@ -58,26 +54,17 @@
 
 <div class="container">
 	<div class="row">
-	         <div class="col-sm-2 paddingTop20">
-            <nav class="nav-sidebar">
-                <ul class="nav">
-                    <li class="active"><a href="javascript:;"><span class="glyphicon glyphicon-star"></span> News</a></li>
-                    <li><a href="javascript:;">Latest news</a></li>
-                    <li><a href="javascript:;">Updates</a></li>
-                    <li class="nav-divider"></li>
-                    <li><a href="javascript:;"><i class="glyphicon glyphicon-off"></i> Sign in</a></li>
-                </ul>
-            </nav>
-                      <div><h2 class="add">Place for your add!</h2></div>
-        </div>
+
 
      <div class="col-md-10 blogShort">
                      <h1><? echo $post['post_subject'];?></h1>
-                    <h2><? echo $post['name'];?></h2>
-                     <img src="http://joern-duwe.de/aquaristik/images/skalare00.jpg" alt="post img" class="pull-left img-responsive postImg img-thumbnail margin10">
+                     <h2><? echo $post['name'];?></h2>
                      <p><? echo $post['post_text'];?></p>
                 
                  </div>
+
+        <?foreach ($tags as $tag):?><a href="#"><span class="label label-info"><?=$tag['tag_name']?></span></a> <?endforeach?>
+
 	</div>
 </div>
     
