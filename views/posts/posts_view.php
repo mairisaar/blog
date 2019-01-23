@@ -63,7 +63,8 @@
                 
                  </div>
 
-        <?foreach ($tags as $tag):?><a href="#"><span class="label label-info"><?=$tag['tag_name']?></span></a> <?endforeach?>
+        <!-- href="#" asemel peab olema tegelik selle tag-iga postituste nimekirjaga lehe aadress-->
+        <?foreach ($tags as $tag):?><a href="<?=BASE_URL?>tags/view/<?=$tag['tag_id']?>"><span class="label label-info"><?=$tag['tag_name']?></span></a> <?endforeach?>
 
 	</div>
 </div>

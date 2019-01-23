@@ -6,17 +6,17 @@
 
 <?foreach($posts as $post):?>
 
-<div class="span8">
+<div>
 
 
     <a href="<?=BASE_URL?>posts/view/<?=$post['post_id']?>"><h1><?=$post['post_subject']?></h1></a>
     <p><?=$post['post_text']?></p>
 
     <div>
-        <span class="badge badge-success">Lisatud <?=$post['post_created']?></span>
+        <span class="badge badge-success">Lisatud <?=$post['post_created'];?></span>
         <div class="pull-right">
             <?foreach ($tags[$post['post_id']] as $tag):?>
-                <a href="#"><span class="label" style="background-color: #5bc0de"><?=$tag?></span></a> <?endforeach?><span class="label"><?=$tag[$tag_id]?>alice</span> <span class="label">story</span> <span class="label">blog</span> <span class="label">personal</span>
+                <a href="<?=BASE_URL?>tags/view/<?=$tag['tag_id']?>"><span class="label label-primary"><?=$tag['tag_name']?></span></a> <?endforeach?>
         </div>
     </div>
 
@@ -24,8 +24,6 @@
 
 <?endforeach?>
 
-<?foreach ($tags[$post['post_id']] as $tag):?>
-    <a href="#"><span class="label" style="background-color: #5bc0de"><?=$tag?></span></a> <?endforeach?>
 
 </div>
 
